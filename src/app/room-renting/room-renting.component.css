@@ -1,0 +1,23 @@
+
+.room-rent{
+    background: url("../../assets/img/Layer6.png") no-repeat center center;    
+    background-size: cover;
+    font-family: 'OpenSansHebrewBold', 'OpenSansHebrew-Regular';
+    font-size: 1.125rem;
+}
+
+.room-rent .section-content{
+    padding-top: 5rem;
+    padding-bottom: 13rem;
+    font-size: 1.125rem;
+    line-height: 1.33;
+    text-align: right;
+    color: #ffffff;
+    -webkit-text-stroke: 0.5px white;
+}
+
+@media screen and (max-width:767px){
+    .room-rent .section-content{
+        padding-top: 0.75rem;
+    }
+}

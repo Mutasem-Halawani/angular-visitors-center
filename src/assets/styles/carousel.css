@@ -1,0 +1,178 @@
+@import './config/variables.config.css';
+
+.owl-carousel{
+    direction: ltr;
+    background-color:#F2F2F2;
+    position: relative;
+}
+
+#owl-carousel-events .owl-item{
+    opacity: 0.2;
+}
+
+.owl-carousel .center{
+    opacity: 1 !important;
+}
+
+.owl-dots{
+    padding: 0.75rem;
+    padding: 2.1rem;
+}
+
+ .owl-dot span{
+    border: 1px solid var(--main-color);
+    background: white !important;
+}
+
+ .owl-dots .active span,  .owl-dot span:hover{
+    background: var(--main-color) !important;
+}
+
+.owl-next, .owl-prev{
+    padding: 0 !important;
+    pointer-events: auto;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-icons{
+    font-size: 86px;
+    position: absolute;
+}
+
+.icon-left-arrow{
+    right: -17px;
+    bottom: -19px;
+}
+
+.icon-right-arrow{
+    top: -24px;
+    left: -17px;
+}
+
+
+.owl-carousel .center .event-cont-body{
+    position: relative !important;
+}
+
+.right-arrow svg, .left-arrow svg{
+    width: 50px;
+    padding: 6px;
+    fill: white;
+    height: 60px;
+    width: 60px;
+}
+
+.owl-carousel-arrows{
+    padding: 0;
+    margin: 0 !important;
+    font-family: unset;
+    border-radius: 50%;
+}
+
+.owl-carousel-arrows:hover, .owl-next:hover, .owl-prev:hover{
+    background: rgba(0,0,0,1) !important;
+    /* opacity: 1; */
+}
+
+.owl-theme .owl-nav{
+    opacity: 0.6;
+}
+
+.owl-carousel-arrows, .owl-next, .owl-prev{
+    border-radius: 50% !important;
+}
+
+.right-arrow svg{
+    transform: rotate(-90deg);
+}
+
+.left-arrow svg{
+    transform: rotate(90deg);
+}
+
+.owl-nav{
+    position: absolute;
+    top: 40% ;
+    left: 0;
+    right: 0;
+    z-index: 500;
+}
+
+#customDots{
+    position: absolute;
+    z-index: 1000;
+    top: 33px;
+    left: 0;
+    right: 0;
+}
+
+.owl-nav, #customDots{
+    pointer-events: none;
+}
+
+.owl-prev, .owl-next, .owl-dot{
+    pointer-events: auto;
+}
+
+#owl-carousel-events .owl-stage-outer{
+    padding-bottom: 1rem;
+}
+
+#customDots span:hover{
+    cursor: pointer;
+}
+
+#owl-carousel-questions .owl-stage-outer{
+    -webkit-transition: all .3s ease-in-out;
+}
+
+.flex-carousel{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.center-item{
+    color: white !important;
+}
+
+/* .carousel-icons:active{
+    animation: pulse 1s infinite; 
+    color: blue;
+} */
+
+@media (max-width: 768px) {
+    #owl-carousel-events .owl-dots {
+        padding: 0rem 1rem 0.5rem 1rem;
+        margin: 0;
+    }
+    
+    #owl-carousel-questions .owl-dots .active span, #owl-carousel-questions .owl-dot span:hover{
+        background: #40a9f4 !important;
+    }
+    
+    #customDots .owl-dot span, #owl-carousel-questions .owl-dot span{
+        background: #40a9f4 !important;
+        border: solid 1px #40a9f4 !important;
+    }
+    
+    #customDots .owl-dot.active span, #owl-carousel-questions .owl-dot.active span{
+        background: white !important;
+        border: solid 1px white !important;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    #owl-carousel-questions .owl-dots{
+        padding: 2.1rem;
+    }
+
+    #owl-carousel-questions .owl-item{
+        opacity: 0.3;
+    }
+}
+

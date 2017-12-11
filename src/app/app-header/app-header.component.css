@@ -1,0 +1,261 @@
+:root{
+    --main-color: #154B66;
+    --secondary-color:#0776BD;
+    --main-width: 45%;
+    --small-screen-main-width: 100%;
+}
+
+header{
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6) ), url("../../assets/img/Layer 11.png") no-repeat center center;
+    background-size: cover;
+    color:white;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+header .container{
+    padding: 2rem 0 0.5rem 0;
+}
+
+.affix{
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.affix .container{
+    padding: 0;
+}
+
+.rectangle:empty{
+    display: block;
+    width: 15px;
+    height: 6px;
+    background-color: #0f75bc;
+}
+
+.desktop-menu-flex{
+    flex: 1;
+}
+
+.desktop-nav-links{
+    color: inherit;
+    text-align: center;
+    font-size: 1.125rem;
+    font-family: 'almoni-dl-aaa-regular', 'OpenSansHebrew-Regular';
+    padding: 0;
+}
+
+.desktop-nav-links:hover{
+    color: inherit;
+    background-color: transparent !important;
+    text-decoration: underline !important;
+}
+
+.desktop-nav-links:focus{
+    background-color: transparent !important;
+}
+
+.active .desktop-nav-links:focus{
+    text-decoration: underline !important;
+}
+.desktop-nav-links:visited{
+    color: white;
+}
+
+.active .desktop-nav-links{
+    background-color: transparent !important;
+    text-decoration: underline;
+    color: #56b1ff !important;
+}
+
+.affix-top .desktop-nav-links{
+    padding: 0 !important;
+}
+
+.affix .desktop-nav-links{
+    padding: 0 !important;
+}
+
+.logo-container{
+    text-align: left;
+}
+
+.title-container h1{
+    font-family: 'almoni-dl-aaa-regular', 'OpenSansHebrew-Regular';
+    font-size: 1.75rem;
+    font-weight: bold;
+    line-height: 0.93;
+    letter-spacing: 1.1px;
+    margin: 0;
+}
+
+.title-row{
+    margin: 0 auto;
+}
+
+#desktop-logo{
+    width:150px;
+}
+
+header .desktop-inner{
+    padding: 0;
+}
+
+/* Mobile */
+
+#mobile-menu{
+    display: none;
+}
+
+#nav-icon span{
+    display: flex;
+    width: 20px;
+    height: 4px;
+    background-color: white;
+    margin: 2px 0;
+    border-radius: 2px;
+}
+
+#nav-icon{
+    display: none;
+    position: absolute;
+    top: -5px;
+    bottom: auto;
+    right: 1px;
+    margin: 1.1rem;
+    height: 32px;
+    z-index: 20;
+}
+
+#nav-icon:hover{
+    cursor: pointer;
+}
+
+.desktop-menu-items-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.affix{
+    z-index: 1100;
+    max-width: 100vw;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.affix #nav-icon{
+    margin: 0.3rem;
+    margin-right: 1rem;
+}
+
+.affix .desktop-menu-items-container{
+    margin: 0;
+}
+
+.affix .scrolling-logo-container{
+    position: absolute;
+    left: 3px;
+    top: 11px;
+    width: 47px;
+}
+
+.scrolling-logo-container{
+    display: none;
+}
+
+.padded {
+    padding-top: 190px;
+    /* padding-top: 162px; */
+}
+
+.padded-mobile {
+    padding-top: 127px;
+}
+
+.top-padding{
+    /* padding-top: 220px; */
+    padding-top: 60px;
+}
+
+.external-links:active{
+    color: #56b1ff;
+}
+
+/* .affix .title-container{
+    display: none !important;
+} */
+
+@media screen and (min-width:768px){
+    .affix .title-row{
+        display: none;
+    }
+}
+
+@media screen and (max-width:767px){
+
+    #nav-icon{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav#desktop{
+        display: none;
+    }
+    
+    .rectangle{
+        display: none !important;
+    }
+
+    .title-row{
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .logo-container{
+        text-align: center;
+    }
+
+    img#desktop-logo{
+        border-bottom: 1.5px solid white;
+        padding-bottom: 0.5rem;
+    }
+
+    .affix{
+        height: 60px;
+    }
+
+    .affix #desktop-logo{
+        display: none;
+    }
+
+
+    .affix #nav-icon{
+        bottom: 0;
+        top: 15px;
+        margin: 0;
+        right: 17px;
+    }
+
+    .affix .scrolling-logo-container{
+        display: inline;
+    }
+
+    header .container {
+        padding: 1rem 0 0 0;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .desktop-menu-items-container{
+        padding: 0;
+    }
+
+}
+

@@ -1,1 +1,500 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --main-color: #154B66;
+    --secondary-color:#0776BD;
+    --main-width: 45%;
+    --small-screen-main-width: 100%;
+}
+
+/* *{
+    color:red;
+} */
+
+@font-face{
+    src:url("./assets/fonts/OpenSansHebrew-Bold.ttf");
+    font-family: 'OpenSansHebrewBold';
+}
+
+@font-face{
+    src:url("./assets/fonts/almoni-dl-aaa-regular.otf");
+    font-family: 'almoni-dl-aaa-regular';
+}
+
+@font-face{
+    src:url("./assets/fonts/almoni-dl-aaa-light.otf");
+    font-family: 'almoni-dl-aaa-light';
+}
+
+@font-face{
+    src:url("./assets/fonts/almoni-dl-aaa-700.ttf");
+    font-family: 'almoni-dl-aaa-700';
+}
+
+@font-face{
+    src:url("./assets/fonts/OpenSansHebrew-Regular.ttf");
+    font-family: 'OpenSansHebrew-Regular';
+}
+
+@font-face{
+    src:url("./assets/fonts/myriad-hebrew.otf");
+    font-family: 'Myriad Hebrew';
+}
+
+@font-face {
+    src:url("./assets/fonts/OpenSansHebrew.ttf");
+    font-family: 'Open Sans Hebrew';
+}
+
+@font-face {
+    src:url("./assets/fonts/OpenSansHebrew-Light.ttf");
+    font-family: 'OpenSansHebrew-Light';
+}
+
+@font-face {
+    src:url("./assets/fonts/Almoni-Tzar-AAA-bold.otf");
+    font-family: 'Almoni-Tzar-AAA-bold';
+}
+
+@font-face {
+    src:url("./assets/fonts/Almoni-Tzar-AAA-regular.otf");
+    font-family: 'Almoni-Tzar-AAA-regular';
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    direction: rtl;
+    font-size: 100%;
+}
+
+html, body{
+    max-width: 100%;
+    /* overflow-x: hidden; */
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+h3{
+    font-size: 1.875rem;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Myriad Hebrew';
+}
+
+li{
+    list-style: none;
+}
+
+strong{
+    display: block;
+}
+
+.hide{
+    display: none;
+    -webkit-transition: all .4s ease-in-out;
+}
+
+.navbar{
+    width:100%;
+    z-index: 2000;
+    min-height: 0;
+    border: 0;
+}
+
+.affix .title-container{
+    display: none;
+}
+
+.affix .container{
+    padding: 0.5rem !important;
+}
+
+
+@media (max-width: 576px) {  }
+
+@media (max-width: 768px) {  }
+
+@media (max-width: 992px) {  }
+
+@media (max-width: 1200px) {  }
+
+.section-title{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.2px;
+    color: var(--main-color);
+    margin: 0;
+    padding: 1.6rem;
+    border-bottom: 1px solid #F2F2F2;
+    text-align: center;
+    font-family: 'almoni-dl-aaa-regular', 'OpenSansHebrew-Regular';
+    height: 3.75rem;
+    box-sizing: border-box; 
+}
+
+.center-text{
+    text-align: center;
+}
+
+.left-text{
+    text-align: left;
+}
+
+main .section-title:before, main .section-title:after{
+    content: ' - ';
+    padding: 5px;
+}
+
+#questions-answers + .section-content{
+    text-align: center;
+}
+
+.category-questions-answers-header{
+    font-family: 'almoni-dl-aaa-regular';
+}
+
+.section-headings{
+    width:33%;
+    margin: 0 auto;
+    font-family: 'almoni-dl-aaa-regular';
+}
+
+.headings-container{
+    display:flex;
+    position: absolute;
+    top: 24px;
+    width: 100%;
+    z-index: 50;
+}
+
+.section-content{
+    font-family: 'OpenSansHebrew-Regular';
+    font-size: 1.125rem;
+}
+
+.section-content, .event-content{
+    margin: 0 auto;
+}
+
+#questions-answers .section-content{
+    padding-top: 5rem;
+}
+
+.events-container{
+    background-color: #F2F2F2;
+    padding-top: 1.5rem !important;
+    font-family: 'OpenSansHebrew-Regular';
+    font-weight: 900;
+}
+
+.event{
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.text {
+    position: relative;
+}
+
+.event-cont-header{
+    padding: 1rem;
+}
+
+.cont-header-text{
+    margin: 0;
+    line-height: 1.5rem;
+    height: 1.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    font-size: 2rem;
+    font-family: 'Almoni-Tzar-AAA-bold';
+    line-height: 0.88;
+    letter-spacing: 0.3px;
+}
+
+.ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-height: 4.5rem;
+    line-height: 1.625rem;
+    margin: 0;
+}
+
+.event-cont-footer, .event-cont-header{
+    background-color: white;
+}
+
+.event-cont-body{
+    height: 270px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.event-cont-footer :nth-child(2) ,.event-cont-footer :nth-child(3){
+    border-left: 1px solid black;
+}
+
+.event-item{
+    padding-left: 1rem; 
+    padding-right: 1rem;
+    font-size: 2.25rem;
+    font-family: 'Almoni-Tzar-AAA-regular';
+}
+
+.event-cont-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.875rem;
+    margin: 0 !important;
+}
+
+.event-description-item{
+    text-align: center;
+}
+
+.event-description-item.day{
+    white-space: nowrap;
+}
+
+.event-cont-footer dt{
+    display: none;
+}
+
+.event-sign-up-link{
+    margin: 0;
+    width: 100%;
+    font-family: 'almoni-dl-aaa-regular';
+    font-size: 	1.875rem;
+}
+
+.my-link{
+    border-radius: 3px !important;
+    background-color:var(--secondary-color);
+    color:white;
+    font-size: 1.875rem;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    -ms-touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.my-link:focus, .my-link:hover{
+    text-decoration: none;
+}
+
+.category{
+    display: flex;
+    align-items: center;
+    /* background-image:url("./assets/img/גמלאים copy 15.png"); */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+    width: 50%;
+    margin: 0.1875rem;
+    font-family: 'OpenSansHebrew-Regular';
+    height: 5rem;
+    box-sizing: border-box;
+}
+
+.section-text{
+    padding: 1rem 0;
+    margin: 0;
+}
+
+#questions-answers{
+    margin-bottom: 1.5rem;
+}
+
+
+/* Two Lines Event's Title */
+.two-lines-text{ /*Add to p*/
+    text-overflow: unset;
+    white-space: unset;
+    max-height: 3.25rem;
+}
+
+.two-lines-white-space{ /*Add to span*/
+    white-space: unset;
+}
+
+
+@media screen and (max-width:352px){
+    .answer-arrow{
+        margin-right: 0.5rem;
+    }
+
+    .question{
+        word-break: break-all;
+    }
+}
+
+@media screen and (max-width:767px){
+
+    .category-questions-answers-header{
+        border-radius: 0;
+    }
+
+    .slide-container.container{
+        padding: 0 0 5.75rem 0;
+    }
+
+    #questions-answers{
+        margin-bottom: 0;
+    }
+
+    .event-cont-footer{
+        padding: 1.25rem;
+        flex-wrap: wrap;
+    }
+
+    .last-item{
+        flex: 1;
+        margin-top: 1.125rem;
+    }
+
+    .cont-header-text{
+        height: 4.5rem;
+        white-space: normal;
+    }
+
+    /* .text.ellipsis::after {
+        content: "...";
+        position: absolute;
+        left: 0; 
+        bottom: 4px;
+    } */
+
+    .event-cont-body{
+        height: 180px;
+    }
+
+    .section-title{
+        height: 2.5rem;
+        padding: 1.2rem;
+    }
+
+    .category{
+        width: 100%;
+        margin: 0.3125rem 0;
+    }
+    
+    .section-content .section-text{
+        margin: 1rem auto;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .section-content{
+        width: var(--small-screen-main-width);
+    }
+    
+    .event-sign-up-link{
+        width: 100%;
+    }
+    
+    .affix-top h1{
+        margin-top: 0.625rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+
+    .container {
+        width: 600px;
+        padding: 0;
+    }    
+}
+
+@media screen and (max-width: 767px){
+    .cont-header-text{
+        font-size: 1.5rem;
+    }
+
+    .event-item{
+        font-size: 1.6875rem;
+        flex: 1;
+    }
+    
+    .event-sign-up-link{
+        font-size: 1.875rem;
+    }
+
+    .ellipsis{
+        max-height: 4.5rem;
+        line-height: 1.625rem;
+    }
+
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* IE10-specific styles go here */
+
+    .category-row{
+        width: 100%;
+    }
+
+    .category{
+        float: right;
+    }
+
+    .answer-arrow{
+        float: left;
+    }
+
+    .right-arrow svg{
+        transform: rotate(90deg);
+    }
+    
+    .left-arrow svg{
+        transform: rotate(-90deg);
+    }
+
+    .right-item{
+        margin-right: -30%;
+    }
+    
+    .left-item{
+        margin-left: 0;
+    }
+ }
+
+ @supports (-ms-ime-align: auto) {
+     /* Microsoft Edge-specific styles go here */
+     
+    .right-arrow svg{
+        transform: rotate(90deg);
+    }
+    
+    .left-arrow svg{
+        transform: rotate(-90deg);
+    }
+  }

@@ -1,0 +1,64 @@
+/* Questions Carousel Bootstrap Override Styles: */
+
+.card{
+    line-height: 1.375rem;
+    box-shadow: 0 1px 1px lightgrey;
+    background-color: white;
+    margin-bottom: 0.625rem;
+}
+
+.card-header a{
+    color: var(--main-color) !important;
+    max-width: 93%;
+    text-decoration: none !important;
+    margin-left: auto;
+}
+
+.card-header.active::after{
+    transform: rotate(-90deg);
+}
+
+.card-header a:hover{
+    color: var(--main-color) !important;
+    text-decoration: none !important;
+}
+
+.card-header a:active{
+    text-decoration: none !important;
+}
+
+.card-header{
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: right;
+    color: var(--main-color);
+    margin: 0;
+    word-break: break-all;
+    padding: 0.75rem 1.25rem;
+    font-family: 'almoni-dl-aaa-regular', 'OpenSansHebrew-Regular';
+    font-size: 1.125rem;
+    letter-spacing: 0.2px;
+    padding-left: 0;
+}
+
+.card-header::after{
+    font-family: "fontello";
+    content: '\F104';
+    padding-right: 10px;
+    color: var(--main-color);
+    font-size: 24px;
+    padding-left: 12px;
+    -webkit-transition: all .4s ease-in-out;
+}
+
+/* .card-header.active + .card-body{
+    height: 200px;
+}
+
+.card-header + .card-body{
+    -webkit-transition: all .4s ease;
+    height: 0;
+    overflow: hidden;
+    margin-top: 10px;
+} */

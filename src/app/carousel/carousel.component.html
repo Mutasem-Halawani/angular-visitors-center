@@ -1,0 +1,45 @@
+<div class="carousel-wrapper">
+    <div class="item" *ngFor="let item of items;let i = index">
+        <div class="slide-container">
+            <section class="slide question-answers-section">
+                <div class="category-questions-answers">
+                    <div class="headings-container">
+                        <h3 class="center-item section-headings">גמלאים</h3>
+                    </div>
+                    <div class="category-questions-answers-header" style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('../../assets/img/גמלאים copy 15.png')">
+                    </div>
+    
+                    <!-- <ngb-accordion #acc="ngbAccordion">
+                    <ngb-panel class="question" title="קיימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמוןימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמון.">
+                        <div class="arrow-holder">
+                            <i [ngClass]="arrowState" class="fa icon-arrow icon-angle-left"></i>
+                        </div>
+                        <ng-template ngbPanelContent>
+                        <p class="answer">קיימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמוןימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמון.</p>
+                        
+                        </ng-template>
+                    </ngb-panel>
+                    </ngb-accordion> -->
+                    <div class="question-container">
+                        <div class="q-a-cont">
+                            <div (click)="toggleAnswer($event)" class="question">
+                                <p class="question-text">קיימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמוןימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמון.</p>
+                                <div class="arrow-holder">
+                                    <i [ngClass]="arrowState" class="fa icon-arrow icon-angle-left"></i>
+                                </div>
+                            </div>
+                            <p [ngClass]="answerToggle" class="answer">קיימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. למגיעים מהחניון הסמוך לספרייה, הגישה לבעלי מוגבלויות היא מהשער התחתון (יש ללחוץ על כפתור הפעמון).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="carousel-nav">
+        <div class="carousel-prev" (click)="prev($event)"><i class="carousel-icons icon-angle-right icon-right-arrow"></i></div>
+        <div class="carousel-next" (click)="next($event)"><i class="carousel-icons icon-angle-left icon-left-arrow"></i></div>
+    </div>
+    <div class="carousel-dots">
+        <span class="dot" *ngFor="let item of items; let i=index"></span>
+    </div>
+</div>

@@ -19,6 +19,11 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "assets/styles/fontello.css",
+        "assets/styles/animate.css",
+        "assets/styles/animations.css",
+        "assets/styles/carousel.css",
+        "assets/styles/bootstrap-overrides.css",
         "styles.css"
       ],
       "scripts": [],

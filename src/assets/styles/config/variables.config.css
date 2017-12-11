@@ -1,0 +1,13 @@
+:root{
+    --main-color: #154B66;
+    --secondary-color:#0776BD;
+    --main-width: 45%;
+    --small-screen-main-width: 100%;
+}
+
+/* @media screen and (max-width:767px){
+    :root{
+        --main-width: 100%;
+    }
+} */
+

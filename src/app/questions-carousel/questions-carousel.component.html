@@ -1,0 +1,338 @@
+<div class="questions-dots-container">
+  <div class="owl-theme">
+      <div class="owl-controls">
+          <div id="customDots" class="owl-dots"></div>
+      </div>
+  </div>
+</div>
+
+<div id="questions-carousel" tabindex="0">
+    <div *ngFor="let question of questions; let i=index" class="slide-container">
+        <section class="slide question-answers-section">
+            <div class="category-questions-answers">
+                <div class="headings-container">
+                    <h3 class="center-item section-headings">{{ question.title }}</h3>
+                </div>
+                <!-- <div class="category-questions-answers-header" [style.background]="'url(' + photo + ')'"> -->
+                <div class="category-questions-answers-header">
+                    <img class="question-header-img" [src]="question.img" alt="">
+                </div>
+
+                <!-- <ngb-accordion #acc="ngbAccordion">
+                <ngb-panel class="question" title="קיימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמוןימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמון.">
+                    <div class="arrow-holder">
+                        <i [ngClass]="arrowState" class="fa icon-arrow icon-angle-left"></i>
+                    </div>
+                    <ng-template ngbPanelContent>
+                    <p class="answer">קיימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמוןימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמון.</p>
+                    
+                    </ng-template>
+                </ngb-panel>
+                </ngb-accordion> -->
+                <div class="question-container">
+                    <div class="q-a-cont">
+                        <div (click)="toggleAnswer($event)" class="question">
+                            <p class="question-text">קיימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמוןימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמון.</p>
+                            <div class="arrow-holder">
+                                <i [ngClass]="arrowState" class="fa icon-arrow icon-angle-left"></i>
+                            </div>
+                        </div>
+                        <p [ngClass]="answerToggle" class="answer">קיימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. למגיעים מהחניון הסמוך לספרייה, הגישה לבעלי מוגבלויות היא מהשער התחתון (יש ללחוץ על כפתור הפעמון).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="nav-container">
+    <button class="prev" (click)="prev()">prev</button>
+    <button class="next" (click)="next()">next</button>
+</div>
+<div *ngFor="let question of questions; let i=index" class="dots-container">
+    <span>{{i}}</span>
+</div>
+
+              <!-- <div class="question-container">
+                  <div class="q-a-cont">
+                      <div class="question">
+                          <p class="question-text">loremloremloremloremloremlemloremloremloremlemloremloremloremoremloremloremloremlemloremloremloremororemloremlemloremloremloremorem</p>
+                          <div class="arrow-holder">
+                              <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+                          </div>
+                      </div>
+                      <p class="answer hide">meme2</p>
+                  </div>
+              </div>
+              <div class="question-container">
+                  <div class="q-a-cont">
+                      <div class="question">
+                          <p class="question-text">עים מהחניון הסמוך לספרייה, הגישה לבעלי מוגבלויות היא מהשער התחתו</p>
+                          <div class="arrow-holder">
+                              <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+                          </div>
+                      </div>
+                      <p class="answer hide">עים מהחניון הסמוך לספרייה, הגישה לבעלי מוגבלויות היא מהשער התחתו</p>
+                  </div>
+              </div>
+              <div class="question-container">
+                  <div class="q-a-cont">
+                      <div class="question">
+                          <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+                          <div class="arrow-holder">
+                              <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+                          </div>
+                      </div>
+                      <p class="answer hide">meme3</p>
+                  </div>
+              </div> -->
+          <!-- </div>
+        </div> -->
+
+
+    <!-- </div> -->
+
+    <!-- </owl-carousel> -->
+
+
+    <!-- <ngb-accordion #acc="ngbAccordion">
+        <ngb-panel class="question" title="קיימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמוןימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמון.">
+            <div class="arrow-holder">
+                <i [ngClass]="arrowState" class="fa icon-arrow icon-angle-left"></i>
+            </div>
+          <ng-template ngbPanelContent>
+            <p class="answer">קיימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמוןימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמון.</p>
+            
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion> -->
+  <!-- <div class="slide-container ">
+      <section class="slide question-answers-section">
+          <div class="category-questions-answers">
+              <div class="headings-container">
+                  <h3 class="center-item section-headings">מורים</h3>
+              </div>
+              <div class="category-questions-answers-header fadeIn custom-fade fadeOut" style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('./assets/img/גמלאים copy 15.png')">
+              </div>
+              <div class="question-container fadeIn custom-fade fadeOut">
+                  <div class="q-a-cont">
+                      <div class="question">
+                          <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+                          <div class="arrow-holder">
+                              <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+                          </div>
+                      </div>
+                      <p class="answer hide">meme1</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <div class="question-container fadeIn custom-fade fadeOut">
+          <div class="q-a-cont">
+              <div class="question">
+                  <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+                  <div class="arrow-holder">
+                      <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+                  </div>
+              </div>
+              <p class="answer hide">meme2</p>
+          </div>
+      </div>
+      <div class="question-container fadeIn custom-fade fadeOut">
+          <div class="q-a-cont">
+              <div class="question">
+                  <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+                  <div class="arrow-holder">
+                      <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+                  </div>
+              </div>
+              <p class="answer hide">meme3</p>
+          </div>
+      </div>
+  </div>
+  <div class="slide-container ">
+      <section class="slide question-answers-section">
+          <div class="category-questions-answers">
+              <div class="headings-container">
+                  <h3 class="center-item section-headings">מורים</h3>
+              </div>
+              <div class="category-questions-answers-header fadeIn custom-fade fadeOut" style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('./assets/img/מורים copy1 6 copy 7.png')">
+              </div>
+              <div class="question-container fadeIn custom-fade fadeOut">
+                  <div class="q-a-cont">
+                      <div class="question">
+                          <p class="question-text">קיימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמוןימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. ל כפתור הפעמון.</p>
+                  <div class="arrow-holder">
+                      <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+                  </div>
+              </div>
+              <p class="answer hide">קיימת גישה לבעלי מוגבלויות המגיעים מהשער הראשי של הקמפוס. למגיעים מהחניון הסמוך לספרייה, הגישה לבעלי מוגבלויות היא מהשער התחתון (יש ללחוץ על כפתור הפעמון).</p>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="question-container fadeIn custom-fade fadeOut">
+  <div class="q-a-cont">
+      <div class="question">
+          <p class="question-text">loremloremloremloremloremloremloremlemloremloremloremorem</p>
+          <div class="arrow-holder">
+              <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+          </div>
+      </div>
+      <p class="answer hide">meme2</p>
+  </div>
+</div>
+<div class="question-container fadeIn custom-fade fadeOut">
+  <div class="q-a-cont">
+      <div class="question">
+          <p class="question-text">עים מהחניון הסמוך לספרייה, הגישה לבעלי מוגבלויות היא מהשער התחתו</p>
+          <div class="arrow-holder">
+              <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+          </div>
+      </div>
+      <p class="answer hide">עים מהחניון הסמוך לספרייה, הגישה לבעלי מוגבלויות היא מהשער התחתו</p>
+  </div>
+</div>
+<div class="question-container fadeIn custom-fade fadeOut">
+  <div class="q-a-cont">
+      <div class="question">
+          <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+          <div class="arrow-holder">
+              <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+          </div>
+      </div>
+      <p class="answer hide">meme3</p>
+  </div>
+</div>
+</div>
+<div class="slide-container ">
+<section class="slide question-answers-section">
+  <div class="category-questions-answers">
+      <div class="headings-container">
+          <h3 class="center-item section-headings">תלמידים</h3>
+      </div>
+      <div class="category-questions-answers-header fadeIn custom-fade fadeOut" style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('./assets/img/תלמידים copy 12.png')">
+      </div>
+      <div class="question-container fadeIn custom-fade fadeOut">
+          <div class="q-a-cont">
+              <div class="question">
+                  <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+                  <div class="arrow-holder">
+                      <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+                  </div>
+              </div>
+              <p class="answer hide">meme1</p>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="question-container fadeIn custom-fade fadeOut">
+  <div class="q-a-cont">
+      <div class="question">
+          <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+          <div class="arrow-holder">
+              <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+          </div>
+      </div>
+      <p class="answer hide">meme2</p>
+  </div>
+</div>
+<div class="question-container fadeIn custom-fade fadeOut">
+  <div class="q-a-cont">
+      <div class="question">
+          <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+          <div class="arrow-holder">
+              <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+          </div>
+      </div>
+      <p class="answer hide">meme3</p>
+  </div>
+</div>
+</div>
+<div class="slide-container ">
+<section class="slide question-answers-section">
+  <div class="category-questions-answers">
+      <div class="headings-container">
+          <h3 class="center-item section-headings">חיילים</h3>
+      </div>
+      <div class="category-questions-answers-header fadeIn custom-fade fadeOut" style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('./assets/img/חיילים copy 12.png')">
+      </div>
+      <div class="question-container fadeIn custom-fade fadeOut">
+          <div class="q-a-cont">
+              <div class="question">
+                  <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+                  <div class="arrow-holder">
+                      <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+                  </div>
+              </div>
+              <p class="answer hide">meme1</p>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="question-container fadeIn custom-fade fadeOut">
+  <div class="q-a-cont">
+      <div class="question">
+          <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+          <div class="arrow-holder">
+              <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+          </div>
+      </div>
+      <p class="answer hide">meme2</p>
+  </div>
+</div>
+<div class="question-container fadeIn custom-fade fadeOut">
+  <div class="q-a-cont">
+      <div class="question">
+          <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+          <div class="arrow-holder">
+              <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+          </div>
+      </div>
+      <p class="answer hide">meme3</p>
+  </div>
+</div>
+</div>
+<div class="slide-container ">
+<section class="slide question-answers-section">
+  <div class="category-questions-answers">
+      <div class="headings-container">
+          <h3 class="center-item section-headings">סטודנטים</h3>
+      </div>
+      <div class="category-questions-answers-header fadeIn custom-fade fadeOut" style="background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('./assets/img/גמלאים copy 15.png')">
+      </div>
+      <div class="question-container fadeIn custom-fade fadeOut">
+          <div class="q-a-cont">
+              <div class="question">
+                  <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+                  <div class="arrow-holder">
+                      <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+                  </div>
+              </div>
+              <p class="answer hide">meme1</p>
+          </div>
+      </div>
+  </div>
+</section>
+<div class="question-container fadeIn custom-fade fadeOut">
+  <div class="q-a-cont">
+      <div class="question">
+          <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+          <div class="arrow-holder">
+              <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+          </div>
+      </div>
+      <p class="answer hide">meme2</p>
+  </div>
+</div>
+<div class="question-container fadeIn custom-fade fadeOut">
+  <div class="q-a-cont">
+      <div class="question">
+          <p class="question-text">loremloremloremloremloremloremloremlorem</p>
+          <div class="arrow-holder">
+              <i class="fa icon-arrow answer-opened icon-angle-left"></i>
+          </div>
+      </div>
+      <p class="answer hide">meme3</p>
+  </div>
+</div>
+</div> -->
