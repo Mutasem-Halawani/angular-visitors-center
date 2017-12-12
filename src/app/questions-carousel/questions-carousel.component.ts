@@ -1,21 +1,28 @@
 import { DataService } from './../services/data.service';
 import { Question } from './../models/questions';
+
+import { CarouselDirective } from '../directives/carousel.directive';
+
 import {
     Component,
+    Directive,
     OnInit,
     AfterViewInit,
     AfterContentInit,
     ViewChild,
     Renderer2,
-    ElementRef 
+    ElementRef,
+    Input,
+    Output,
+    EventEmitter,
 } from '@angular/core';
 // import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 // import $ from 'jquery';
 // import {OwlCarousel} from 'ngx-owl-carousel';
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 // import { AfterContentInit } from '@angular/core/src/metadata/lifecycle_hooks';
-
 
 @Component({
   selector: 'app-questions-carousel',
@@ -28,6 +35,15 @@ export class QuestionsCarouselComponent implements OnInit, AfterViewInit {
     constructor(
         private el: ElementRef,
     ) {}
+
+    arrowState = 'answer-opened';
+    borderHighlight;
+    answerToggle = 'hide';
+    // marginOffset = 650;
+    activeItem = 0;
+    
+    selectedIndex = 0;
+    actualIndex = 0;
 
     photo:any;
 
@@ -149,10 +165,7 @@ export class QuestionsCarouselComponent implements OnInit, AfterViewInit {
         // }
     ]
     
-    arrowState = 'answer-opened';
-    borderHighlight;
-    answerToggle = 'hide';
-    // marginOffset = 650;
+ 
   
     
 
@@ -177,6 +190,10 @@ export class QuestionsCarouselComponent implements OnInit, AfterViewInit {
 
     next(){
         console.log('next')
+    }
+
+    slideSelected(e){
+        console.log(e);
     }
     
     ngAfterViewInit(){

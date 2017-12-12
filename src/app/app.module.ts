@@ -25,6 +25,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { ApiService }  from './services/api.service';
 
 import { HttpClient } from '@angular/common/http';
+import { CarouselDirective } from './directives/carousel.directive';
 
 // import { ScrollSpyModule } from 'ngx-scrollspy';
 
@@ -39,7 +40,8 @@ import { HttpClient } from '@angular/common/http';
     RoomRentingComponent,
     MobileOnlyContentComponent,
     MobileMenuComponent,
-    CarouselComponent
+    CarouselComponent,
+    CarouselDirective
   ],
   imports: [
     BrowserModule,

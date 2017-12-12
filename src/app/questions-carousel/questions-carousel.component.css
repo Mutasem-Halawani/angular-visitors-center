@@ -2,8 +2,21 @@
 
 /* import './assets/img/חיילים copy 12.png'; */
 
+.slide-container{
+    /* display: none; */
+    margin: 0 40px;
+}
+
+.slide-container.active{
+    /* display: block; */
+    color:blue;
+}
+
 #questions-carousel{
     display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #F2F2F2;
 }
 
 #questions-section{
@@ -67,7 +80,7 @@
 }
 
 .question-answers-section{
-    background-color: #F2F2F2;
+    /* background-color: #F2F2F2; */
     padding-top: 5rem;
 }
 
